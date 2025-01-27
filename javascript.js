@@ -20,3 +20,4 @@ function seeInfo(){
     document.write(paragraph2.innerHTML) //Muestra el texto con el strong
 }
 
+
