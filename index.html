@@ -25,7 +25,17 @@
             let a=document.querySelector("p").style.backgroundColor="green"
             let p=document.querySelector("p>strong").style.backgroundColor="blue"
         }
-</script>
+        function showInfo(){
+            let user='{"name":"María","surnames":"Veiga Ramirez"}'
+            let userObj = JSON.parse(user)
+            alert(userObj.name)
+        }
+        function showRestInfo(){
+            fetch('https://api.restful-api.dev/objects?id=1')
+            .then(response => response.json())
+            .then(data => alert(data[0].name))
+        }
+    </script>
 </head>
 <body class="d-flex flex-column" onload="changeBgParagraph()">
     <h1 id="header1" onmouseover="changeColor()" class="text-primary bg-primary-subtle p-5 m-0">Bootstrap</h1>
@@ -33,5 +43,7 @@
     <h2>This is a subtitle</h2>
     <p>My name is <strong>Noemi</strong></p>
     <p>Today is not a sunny day</p>
+    <p onclick="showInfo()">Show info</p>
+    <p onclick="showRestInfo()">Paragraph to click</p>
 </body>
 </html>
