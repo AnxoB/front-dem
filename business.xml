@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE business [
-    <!ELEMENT business (videogame)>
+    <!ELEMENT business (videogame | address)+>
     <!ELEMENT videogame (title, developer)>
     <!ELEMENT title (#PCDATA)>
     <!ELEMENT developer (#PCDATA)>
+    <!ELEMENT address (street, free_shipping)>
+    <!ELEMENT street (#PCDATA)>
+    <!ELEMENT free_shipping EMPTY>
 ]>
 <business>
     <videogame>
         <title>Dragon Quest IX</title>
         <developer>Level 5</developer>
     </videogame>
+    <videogame>
+        <title>Minecraft</title>
+        <developer>Mojang</developer>
+    </videogame>
+    <address>
+        <street>Rúa San Clemente</street>
+        <free_shipping/>
+    </address>
 </business>
