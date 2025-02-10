@@ -2,22 +2,25 @@
 <!DOCTYPE business [
     <!ELEMENT business (videogame | address)+>
     <!ELEMENT videogame (title, developer)>
+    <!ATTLIST videogame id ID #REQUIRED>
+    <!ATTLIST videogame published (yes|no) "no">
     <!ELEMENT title (#PCDATA)>
     <!ELEMENT developer (#PCDATA)>
     <!ELEMENT address (street, free_shipping)>
+    <!ATTLIST address id ID #REQUIRED>
     <!ELEMENT street (#PCDATA)>
     <!ELEMENT free_shipping EMPTY>
 ]>
 <business>
-    <videogame>
+    <videogame id="v1" published="no">
         <title>Dragon Quest IX</title>
         <developer>Level 5</developer>
     </videogame>
-    <videogame>
+    <videogame id="v2" published="yes">
         <title>Minecraft</title>
         <developer>Mojang</developer>
     </videogame>
-    <address>
+    <address id="a1">
         <street>Rúa San Clemente</street>
         <free_shipping/>
     </address>

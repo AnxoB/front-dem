@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE cinema SYSTEM "cinema.dtd">
+<cinema>
+    <film id="F1" maker="M1">
+        <name>The silent of lambs</name>
+    </film>
+    <film id="F2" maker="M2">
+        <name>Fast and Furious</name>
+    </film>
+    <film id="F3" maker="M3">
+        <name>Shreck</name>
+    </film>
+    <filmmaker id="M1">
+        <name>Jonathan Demme</name>
+    </filmmaker>
+    <filmmaker id="M2">
+        <name>Rob</name>
+    </filmmaker>
+    <filmmaker id="M3">
+        <name>Andrew Adamson</name>
+        <name>Vicky Jenson</name>
+    </filmmaker>
+    <note>
+        This is important
+        <alert/>
+    </note>
+</cinema>
