@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="person" type="personType"/>
+    <xs:complexType name="personType" mixed="true">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="gender" type="genderType" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="genderType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="female"/>
+            <xs:enumeration value="male"/>
+            <xs:enumeration value="unknown"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
