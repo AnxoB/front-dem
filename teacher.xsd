@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="teacher">
+        <xs:complexType>
+            <xs:group ref="teacherInfo"/>
+            <xs:attributeGroup ref="teacherAtts"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="teacherInfo">
+        <xs:all>
+            <xs:element name="firstname" type="xs:string" />
+            <xs:element name="surname" type="xs:string" />
+            <xs:element name="age" type="xs:string" />
+            <xs:element name="courses" type="coursesType"></xs:element>
+            <xs:element name="studentsage" type="studentsagesType"></xs:element>
+        </xs:all>
+    </xs:group>
+    <xs:attributeGroup name="teacherAtts">
+        <xs:attribute name="yearsexperience" type="xs:short"></xs:attribute>
+        <xs:attribute name="borndate" type="xs:date"></xs:attribute>
+    </xs:attributeGroup>
+    <xs:simpleType name="coursesType">
+        <xs:list itemType="xs:string">
+        </xs:list>
+    </xs:simpleType>
+    <xs:simpleType name="studentsagesType">
+        <xs:list itemType="xs:int"></xs:list>
+    </xs:simpleType>
+</xs:schema>
